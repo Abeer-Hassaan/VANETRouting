@@ -1,0 +1,201 @@
+[General]
+network = RoutingScenario
+sim-time-limit = 1200s
+debug-on-errors = true
+cmdenv-express-mode = true
+image-path = ../../../../images
+
+
+# UDPBasicApp
+#*.node[1].numApps = 1
+#*.node[1].app[0].typename = "UdpBasicApp"
+#*.node[1].app[0].destAddresses = "node[0]"
+#*.node[1].app[0].destPort = 5000
+#*.node[1].app[0].messageLength = 1000B
+#*.node[1].app[0].sendInterval = exponential(12ms)
+#*.node[1].app[0].packetName = "UDPData"
+#*.node[1].app[0].startTime = 60s
+#*.node[1].app[0].stopTime = 80s
+#*.node[0].numApps = 1
+#*.node[0].app[0].typename = "UdpSink"
+#*.node[0].app[0].localPort = 5000
+
+
+*.node[0..199].numApps = 1	  
+*.node[0..199].app[0].typename = "UdpBasicApp"
+*.node[0].app[0].destAddresses = "node[5]"
+*.node[1].app[0].destAddresses = "node[6]"
+*.node[2].app[0].destAddresses = "node[7]"
+*.node[3].app[0].destAddresses = "node[8]"
+*.node[4].app[0].destAddresses = "node[9]"
+*.node[5].app[0].destAddresses = "node[10]"
+*.node[6].app[0].destAddresses = "node[11]"
+*.node[7].app[0].destAddresses = "node[12]"
+*.node[8].app[0].destAddresses = "node[13]"
+*.node[9].app[0].destAddresses = "node[14]"
+*.node[10].app[0].destAddresses = "node[14]"
+*.node[0..10].app[0].startTime=300s
+*.node[0..10].app[0].stopTime =1200s
+*.node[11].app[0].destAddresses = "node[50]"
+*.node[12].app[0].destAddresses = "node[51]"
+*.node[13].app[0].destAddresses = "node[52]"
+*.node[14].app[0].destAddresses = "node[53]"
+*.node[15].app[0].destAddresses = "node[54]"
+*.node[16].app[0].destAddresses = "node[55]"
+*.node[17].app[0].destAddresses = "node[56]"
+*.node[18].app[0].destAddresses = "node[57]"
+*.node[19].app[0].destAddresses = "node[70]"
+*.node[20].app[0].destAddresses = "node[71]"
+*.node[11..20].app[0].startTime=300s
+*.node[11..20].app[0].stopTime =1200s
+
+##*.node[34].app[0].destAddresses = "node[72]"
+#*.node[35].app[0].destAddresses = "node[150]"
+#*.node[36].app[0].destAddresses = "node[151]"
+#*.node[37].app[0].destAddresses = "node[152]"
+#*.node[38].app[0].destAddresses = "node[153]"
+#*.node[39].app[0].destAddresses = "node[133]"
+#*.node[40].app[0].destAddresses = "node[134]"
+#*.node[41].app[0].destAddresses = "node[135]"
+#*.node[42].app[0].destAddresses = "node[136]"
+#*.node[43].app[0].destAddresses = "node[137]"
+#*.node[44].app[0].destAddresses = "node[138]"
+#*.node[45].app[0].destAddresses = "node[139]"
+#*.node[46].app[0].destAddresses = "node[140]"
+#*.node[47].app[0].destAddresses = "node[141]"
+#*.node[48].app[0].destAddresses = "node[142]"
+#*.node[49].app[0].destAddresses = "node[143]"
+#*.node[50].app[0].destAddresses = "node[144]"
+#*.node[51].app[0].destAddresses = "node[145]"
+#*.node[52].app[0].destAddresses = "node[146]"
+#*.node[53].app[0].destAddresses = "node[147]"
+#*.node[54].app[0].destAddresses = "node[148]"
+#*.node[55].app[0].destAddresses = "node[149]"
+##*.node[56].app[0].destAddresses = "node[150]"
+##*.node[57].app[0].destAddresses = "node[156]"
+#*.node[35..55].app[0].startTime=550s
+#*.node[34..43].app[0].stopTime =580s
+##*.node[44..57].app[0].startTime=220s
+##*.node[44..57].app[0].stopTime =230s
+##
+##
+#*.node[151].app[0].destAddresses = "node[101]"
+#*.node[152].app[0].destAddresses = "node[102]"
+#*.node[153].app[0].destAddresses = "node[103]"
+#*.node[154].app[0].destAddresses = "node[104]"
+#*.node[155].app[0].destAddresses = "node[105]"
+#*.node[156].app[0].destAddresses = "node[106]"
+#*.node[157].app[0].destAddresses = "node[107]"
+##*.node[158].app[0].destAddresses = "node[108]"
+##*.node[159].app[0].destAddresses = "node[109]"
+##*.node[160].app[0].destAddresses = "node[110]"
+##*.node[161].app[0].destAddresses = "node[111]"
+##*.node[162].app[0].destAddresses = "node[112]"
+##*.node[163].app[0].destAddresses = "node[113]"
+##*.node[164].app[0].destAddresses = "node[114]"
+##*.node[165].app[0].destAddresses = "node[115]"
+##*.node[166].app[0].destAddresses = "node[116]"
+##*.node[167].app[0].destAddresses = "node[117]"
+##*.node[168].app[0].destAddresses = "node[118]"
+##*.node[169].app[0].destAddresses = "node[119]"
+##*.node[170].app[0].destAddresses = "node[120]"
+#*.node[150..157].app[0].startTime=580s
+#*.node[150..157].app[0].stopTime =600s
+#
+#
+
+#*.node[171].app[0].destAddresses = "node[76]"
+#*.node[172].app[0].destAddresses = "node[77]"
+#*.node[173].app[0].destAddresses = "node[78]"
+#*.node[174].app[0].destAddresses = "node[79]"
+#*.node[175].app[0].destAddresses = "node[80]"
+#*.node[176].app[0].destAddresses = "node[81]"
+#*.node[177].app[0].destAddresses = "node[82]"
+#*.node[178].app[0].destAddresses = "node[83]"
+#*.node[179].app[0].destAddresses = "node[84]"
+#*.node[180].app[0].destAddresses = "node[85]"
+#*.node[181].app[0].destAddresses = "node[86]"
+#*.node[182].app[0].destAddresses = "node[87]"
+#*.node[183].app[0].destAddresses = "node[88]"
+#*.node[184].app[0].destAddresses = "node[89]"
+#*.node[185].app[0].destAddresses = "node[90]"
+#*.node[186].app[0].destAddresses = "node[91]"
+#*.node[187].app[0].destAddresses = "node[92]"
+#*.node[188].app[0].destAddresses = "node[93]"
+#*.node[189].app[0].destAddresses = "node[94]"
+#*.node[190].app[0].destAddresses = "node[95]"
+#*.node[191].app[0].destAddresses = "node[96]"
+#*.node[192].app[0].destAddresses = "node[97]"
+#*.node[193].app[0].destAddresses = "node[98]"
+#*.node[194].app[0].destAddresses = "node[159]"
+#*.node[195].app[0].destAddresses = "node[160]"
+#*.node[196].app[0].destAddresses = "node[161]"
+#*.node[197].app[0].destAddresses = "node[165]"
+#*.node[198].app[0].destAddresses = "node[166]"
+#*.node[199].app[0].destAddresses = "node[167]"
+#*.node[171..184].app[0].startTime=240s
+#*.node[171..184].app[0].stopTime =255s
+#*.node[185..199].app[0].startTime=240s
+#*.node[185..199].app[0].stopTime =250s
+*.node[0..199].app[0].destPort = 5000
+*.node[0..199].app[0].messageLength = 500B
+*.node[0..199].app[0].sendInterval = exponential(12ms)
+*.node[0..199].app[0].packetName = "UDPData"
+#*.node[0..99].app[0..99].startTime = replaceUnit (20+(index()), "s")
+
+#*.node[0..199].app[0].typename = "UdpSink"
+#*.node[0..199].app[0].localPort = 5000
+
+
+
+
+
+
+
+###################################################################
+
+# Ieee80211Interface
+
+
+
+
+*.node[0..199].wlan[0].opMode = "p"
+*.node[0..199].wlan[0].radio.bandName = "5.9 GHz"
+*.node[0..199].wlan[0].radio.channelNumber = 3
+*.node[0..199].wlan[0].radio.transmitter.power = 20mW
+*.node[0..199].wlan[0].radio.bandwidth = 10 MHz
+*.node*.wlan[*].mac.hcf.rateSelection.dataFrameBitrate = 48 Mbps
+#*.node[0..199].wlan[0].bitrate = 6 Mbps
+
+#*.wlan*.mgmt.typename = "Ieee80211MgmtAdhoc"
+#**.wlan*.agent.typename = ""
+#**.wlan*.opMode = "g(mixed)"
+
+#*.node[0..199].wlan[0].typename = "AckingWirelessInterface"
+#*.node[0..199].wlan[0].bitrate = 2Mbps
+#*.node[0..199].wlan[0].radio.transmitter.communicationRange = 250m
+
+
+
+*.node[0..199].ipv4.configurator.typename = "HostAutoConfigurator"
+*.node[0..199].ipv4.configurator.interfaces = "wlan0"
+
+
+
+###################################################################
+
+# VeinsInetMobility
+*.node[*].mobility.typename = "VeinsInetMobility"
+
+# VeinsInetManager
+*.manager.updateInterval = 0.1s
+*.manager.host = "localhost"
+*.manager.port = 9999
+*.manager.autoShutdown = true
+*.manager.launchConfig = xmldoc("square.launchd.xml")
+*.manager.moduleType = "vanettutorials.veins_inet.VeinsInetRoutingCar"
+
+**.vector-recording = true
+
+# Routing
+**.router = "Aodv"
